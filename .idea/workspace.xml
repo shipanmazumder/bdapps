@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f8c56b1d-8e75-40be-8522-ea883dea43c6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/InstructionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/InstructionController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +25,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -155,18 +157,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581220448773</updated>
-      <workItem from="1581220450965" duration="20305000" />
+      <workItem from="1581220450965" duration="21555000" />
     </task>
+    <task id="LOCAL-00001" summary="instruction server ip fixed">
+      <created>1581246374203</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581246374203</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="instruction server ip fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="instruction server ip fixed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="600" y="288" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1581239550655">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="600" y="288" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581239550655" />
+    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1581247538184">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581247538184" />
     <state x="540" y="256" key="IDE.errors.dialog" timestamp="1581228957433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -175,6 +193,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581239476554" />
+    <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581246382677">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581246382677" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1581245094063">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
