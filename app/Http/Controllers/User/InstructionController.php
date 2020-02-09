@@ -20,7 +20,7 @@ class InstructionController extends Controller
     }
    public function index()
     {
-        $this->data['host_address']=$_SERVER['SERVER_NAME'];
+        $this->data['host_address']=$_SERVER['REMOTE_ADDR'];
         $this->data['sms_url']="https://www.shipansm.com/phpapp/samples/sms/SampleSmsApp.php";
         $this->data['ussd_url']="https://www.shipansm.com/phpapp/samples/ussd/SampleUssdApp.php";
         return view("user.instruction.instruction",$this->data);
