@@ -15,10 +15,14 @@ class CreateInstallAppsTable extends Migration
     {
         Schema::create('install_apps', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->smallInteger('user_id');
             $table->string('app_name',50)->unique();
             $table->string('app_id',50)->unique();
             $table->string('password',200);
+            $table->tinyInteger('sms_time');
+            $table->tinyInteger('sms_time_format');
             $table->smallInteger('category_id');
+            $table->index('user_id');
             $table->timestamps();
         });
     }

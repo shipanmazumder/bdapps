@@ -28,5 +28,15 @@ Route::group(['prefix'=>'user','middleware'=>['user','auth'],'namespace'=>'User'
 
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
     Route::get('/instruction', 'InstructionController@index')->name('instruction');
+//    Route::get('/install', 'InstallAppController@index')->name('install');
+
+    Route::resource("installapp",'InstallAppController')->names([
+        'index' => 'install',
+    ])->except([
+        'create','store','destroy','show','edit','update','destroy'
+    ]);
+    Route::post('/install', 'InstallAppController@store');
+    Route::get('/faq-generator', 'FaqController@index')->name('faq');
+    Route::post('/faq_generator', 'FaqController@faqGenerator');
 
 });

@@ -2,12 +2,23 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Category;
 use App\Http\Controllers\Controller;
 use App\InstallApp;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
+use Session;
 class InstallAppController extends Controller
 {
+     public function __construct()
+    {
+
+        $this->middleware(function ($request, $next) {
+            Session::put('top_menu',"installApp");
+            Session::put('sub_menu',"installApp");
+            return $next($request);
+        });
+    }
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +26,9 @@ class InstallAppController extends Controller
      */
     public function index()
     {
-        //
+        $this->data['add']=true;
+        $this->data['category']=Category::all();
+        return view('user.installlapp.install',$this->data);
     }
 
     /**
@@ -36,7 +49,19 @@ class InstallAppController extends Controller
      */
     public function store(Request $request)
     {
-        //
+//       dd($request->all());
+       $data=$request->validate([
+            'app_name' => ['required', 'string', 'unique:install_apps'],
+            'app_id' => ['required', 'string', 'max:11', 'unique:install_apps'],
+            'password' => ['required', 'string'],
+            'sms_time' => ['required'],
+            'sms_time_format' => ['required'],
+            'category_id' => ['required']
+       ]);
+       $data['user_id']=Auth::user()->id;
+       InstallApp::create($data);
+       setMessage('message','success','App Install Successfully');
+       return back();
     }
 
     /**
