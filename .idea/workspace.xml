@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8c56b1d-8e75-40be-8522-ea883dea43c6" name="Default Changelist" comment="content send success">
-      <change afterPath="$PROJECT_DIR$/app/Console/Commands/cronSms.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/cronSms.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/cronSms.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +170,7 @@
       <workItem from="1581220450965" duration="21610000" />
       <workItem from="1581247674073" duration="104000" />
       <workItem from="1581304723553" duration="15175000" />
-      <workItem from="1581392439740" duration="27074000" />
+      <workItem from="1581392439740" duration="27944000" />
     </task>
     <task id="LOCAL-00001" summary="instruction server ip fixed">
       <created>1581246374203</created>

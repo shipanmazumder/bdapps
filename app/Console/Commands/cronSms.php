@@ -7,6 +7,7 @@ use App\InstallApp;
 use App\Schedule;
 use App\User;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Storage;
 
 class cronSms extends Command
 {
@@ -41,6 +42,7 @@ class cronSms extends Command
      */
     public function handle()
     {
+        Storage::put("cron_sms.txt","work");
 //        dd("s");
         $users=User::where("status",1)->get();
 //        dd($users);
