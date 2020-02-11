@@ -36,6 +36,9 @@
                     <li>
                         <a href="{{ route("user.faq")}}" class="waves-effect {{set_Topmenu("faq")}}"><i class="md  md-dashboard"></i><span> FAQ Generator </span></a>
                     </li>
+                    <li>
+                        <a href="{{ route("user.content")}}" class="waves-effect {{set_Topmenu("content")}}"><i class="md  md-dashboard"></i><span> Content </span></a>
+                    </li>
 {{--                    <li class="has_sub">--}}
 {{--                        <a href="#" class="waves-effect {{set_Topmenu("product")}}"><i class="md  md-settings-input-component"></i><span>Product</span><span class="pull-right"><i class="md md-add"></i></span></a>--}}
 {{--                        <ul class="list-unstyled">--}}

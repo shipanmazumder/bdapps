@@ -38,5 +38,7 @@ Route::group(['prefix'=>'user','middleware'=>['user','auth'],'namespace'=>'User'
     Route::post('/install', 'InstallAppController@store');
     Route::get('/faq-generator', 'FaqController@index')->name('faq');
     Route::post('/faq_generator', 'FaqController@faqGenerator');
-
+    Route::get('/content', 'ContentController@index')->name('content');
+    Route::post('/content', 'ContentController@sendSms');
 });
+Route::post('samples/ussd/SampleUssdApp.php', 'API\UssdSubscriptionController@index');

@@ -7,10 +7,15 @@ class BDAppsApi {
     public $app_id = "";
     public $password = "";
     public $subscriberId = "";
+    public $ussdresposemessage = "";
     private $status = false;
     private $message = "Invalid Request";
     private $statusCode = "E1312"; // BDAPPS ERROR CODE // FOR SUCCESS CODE: "S1000"
     private $statusDetail = "Request Invalid.";
+    public $destinationAddress='';
+    public $sessionId;
+    public $ussdOperation;
+    public $version;
 
     public function isInvalid() {
         $invalid = false;
@@ -23,10 +28,10 @@ class BDAppsApi {
             $message .= " Password not found!";
             $invalid = true;
         }
-        if(!isset($this->subscriberId)) {
-            $message .= " SubscriberId not found!";
-            $invalid = true;
-        }
+//        if(!isset($this->subscriberId)) {
+//            $message .= " SubscriberId not found!";
+//            $invalid = true;
+//        }
         $this->message = $message;
         return $invalid;
     }
@@ -37,18 +42,35 @@ class BDAppsApi {
             'statusDetail' => $this->statusDetail,
         ]);
     }
+    public function ussdSend() {
+        if($this->isInvalid()) {
+            return $this->errorOutput();
+        }
+         $arrayField = array(
+             "applicationId" => $this->app_id,
+            "password" => $this->password,
+            "message" => $this->ussdresposemessage,
+            "sessionId" => $this->sessionId,
+            "ussdOperation" => $this->ussdOperation,
+            "destinationAddress" => $this->destinationAddress,
+            );
+        $json = json_encode($arrayField);
+        $this->url = 'https://developer.bdapps.com/ussd/send';
+        return $this->sendRequest($json);
+    }
 
     public function subscribe() {
         if($this->isInvalid()) {
             return $this->errorOutput();
         }
-        $json = json_encode([
-            "applicationId" => $this->app_id,
+         $arrayField = array(
+             "applicationId" => $this->app_id,
             "password" => $this->password,
-            "subscriberId" => "tel:".$this->subscriberId,
-            "version" => "1.0",
-            "action" => "1"
-        ]);
+            "version" => $this->version,
+            "action" => "1",
+            "subscriberId" => $this->subscriberId
+            );
+        $json=json_encode($arrayField);
 
         $this->url = 'https://developer.bdapps.com/subscription/send';
         return $this->sendRequest($json);
@@ -58,13 +80,14 @@ class BDAppsApi {
         if($this->isInvalid()) {
             return $this->errorOutput();
         }
-        $json = json_encode([
-            "applicationId" => $this->app_id,
+       $arrayField = array(
+             "applicationId" => $this->app_id,
             "password" => $this->password,
-            "subscriberId" => "tel:".$this->subscriberId,
-            "version" => "1.0",
-            "action" => "0"
-        ]);
+            "version" => $this->version,
+            "action" => "0",
+            "subscriberId" => $this->subscriberId
+            );
+        $json=json_encode($arrayField);
 
         $this->url = 'https://developer.bdapps.com/subscription/send';
         return $this->sendRequest($json);
@@ -77,22 +100,22 @@ class BDAppsApi {
         $json = json_encode([
             "applicationId" => $this->app_id,
             "password" => $this->password,
-            "subscriberId" => "tel:".$this->subscriberId,
+            "subscriberId" => $this->subscriberId,
         ]);
 
         $this->url = 'https://developer.bdapps.com/subscription/send';
         return $this->sendRequest($json);
     }
-    
+
     public function sendRequest($jsonStream){
 
-        $ch = curl_init($this->url);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+         $ch = curl_init($this->url);
         curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
         curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonStream);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $res = curl_exec($ch);
+        $res = curl_exec($ch); //Send request and get response
         curl_close($ch);
         return $res;
 

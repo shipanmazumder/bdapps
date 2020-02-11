@@ -26,30 +26,8 @@ FAQ Generator
                                         <div class="panel-body">
                                             <div class="col-sm-12">
                                                 <div class="form-group">
-                                                    <label for="name">Name</label><small class="req">*</small>
-                                                    <input  name="name" type="text" class="form-control"  requiredid="name" placeholder="Your Name">
-                                                    @error('name')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <div class="form-group">
-                                                    <label for="email">Email</label><small class="req">*</small>
-                                                    <input  name="email" type="email" class="form-control"  requiredid="email" placeholder="Eour Email">
-                                                    @error('email')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <div class="form-group">
                                                     <label for="app_name">App Name</label><small class="req">*</small>
-                                                    <input  name="app_name" type="text" class="form-control"  requiredid="app_name" placeholder="App Name">
+                                                    <input  name="app_name" type="text" class="form-control" id="app_name"  requiredid="app_name" placeholder="App Name">
                                                     @error('app_name')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
@@ -60,7 +38,7 @@ FAQ Generator
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <label for="app_id">App ID</label><small class="req">*</small>
-                                                    <input  name="app_id" type="text" class="form-control"  requiredid="app_id" placeholder="APP_XXXXXX">
+                                                    <input  name="app_id" type="text" class="form-control"  required id="app_id" placeholder="APP_XXXXXX">
                                                     @error('app_id')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
@@ -82,7 +60,7 @@ FAQ Generator
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <label for="ussd_code">USSD Code</label><small class="req">*</small>
-                                                    <input  name="ussd_code" type="text" class="form-control"  requiredid="ussd_code" placeholder="*213*XXXX#">
+                                                    <input  name="ussd_code" type="text" class="form-control"  required id="ussd_code" placeholder="*213*XXXX#">
                                                     @error('sms_keyword')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
@@ -94,7 +72,7 @@ FAQ Generator
                                                 <div class="form-group">
                                                     <label for="long_desc">Long Description</label><small class="req">*</small><br/>
                                                     <code>&lt;Service Name&gt; is a &lt;Service type&gt; that offers &lt;function of the service&gt;. The service offers &lt;Details&gt; of the service. As details as possible&gt; </code>
-                                                    <textarea name="long_desc"  class="form-control" placeholder="Long Description" id="long_desc" cols="30" rows="5"></textarea>
+                                                    <textarea name="long_desc"  class="form-control" placeholder="Long Description" required id="long_desc" cols="30" rows="5"></textarea>
                                                     @error('long_desc')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>
@@ -106,7 +84,7 @@ FAQ Generator
                                                 <div class="form-group">
                                                     <label for="short_desc">Short Description</label><small class="req">*</small><br/>
                                                     <code>This is a subscription based &lt;Please mention the type&gt; service.</code>
-                                                    <textarea name="short_desc"  class="form-control" placeholder="Short Description" id="short_desc" cols="30" rows="5"></textarea>
+                                                    <textarea name="short_desc"  class="form-control" placeholder="Short Description" required id="short_desc" cols="30" rows="5"></textarea>
                                                     @error('long_desc')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>

@@ -58,3 +58,13 @@ if (!function_exists('debug_v')) {
         die();
     }
 }
+
+if (!function_exists('logFile')) {
+
+   function logFile($rtn){
+        $f=fopen(asset("public/log.txt"),"a");
+        fwrite($f, $rtn . "\n");
+        fclose($f);
+	}
+
+}

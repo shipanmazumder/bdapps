@@ -7,7 +7,7 @@ Instruction
         <div class="container">
             <!-- Start Widget -->
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-8">
                             <div class="panel panel-border panel-info">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">
@@ -17,23 +17,25 @@ Instruction
                                     </h3>
                                 </div>
                                 <div class="panel-body">
-                                    <table class="table table-bordered">
-                                        <tr>
-                                            <td><strong>Allowed Host Address: </strong></td>
-                                            <td><code id="host_address">{{ $host_address  }}</code></td>
-                                            <td><button onclick="copyText('{{$host_address}}')" class="btn btn-success">Copy Url</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>Message Receiving URL: </strong></td>
-                                            <td><code id="sms_url">{{ $sms_url  }}</code></td>
-                                            <td><button  onclick="copyText('{{$sms_url}}')" class="btn btn-success">Copy Url</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td><strong>USSD Receiving URL: </strong></td>
-                                            <td><code>{{ $ussd_url  }}</code></td>
-                                            <td><button onclick="copyText('{{ $ussd_url  }}')" class="btn btn-success">Copy Url</button></td>
-                                        </tr>
-                                    </table>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <tr>
+                                                <td><strong>Allowed Host Address: </strong></td>
+                                                <td><code id="host_address">{{ $host_address  }}</code></td>
+                                                <td><button onclick="copyText('{{$host_address}}')" class="btn btn-success">Copy Url</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>Message Receiving URL: </strong></td>
+                                                <td><code id="sms_url">{{ $sms_url  }}</code></td>
+                                                <td><button  onclick="copyText('{{$sms_url}}')" class="btn btn-success">Copy Url</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td><strong>USSD Receiving URL: </strong></td>
+                                                <td><code>{{ $ussd_url  }}</code></td>
+                                                <td><button onclick="copyText('{{ $ussd_url  }}')" class="btn btn-success">Copy Url</button></td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                 </div>
                             </div> <!-- panel -->
                     </div> <!-- col -->

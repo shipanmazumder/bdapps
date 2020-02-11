@@ -29,8 +29,6 @@ class FaqController extends Controller
     {
 //        dd($request->all());
         $data=$request->validate([
-            'name' => ['required', 'string'],
-            'email' => ['required', 'string'],
             'app_name' => ['required', 'string'],
             'app_id' => ['required', 'string'],
             'sms_keyword' => ['required', 'string'],
@@ -38,7 +36,7 @@ class FaqController extends Controller
             'long_desc' => ['required', 'string'],
             'short_desc' => ['required', 'string'],
        ]);
-        $pdf = PDF::loadView('user.faq.faqgenerate', $data);
+        $pdf = PDF::loadView('user.faq.faqgenerate', $data)->setWarnings(false)->setPaper('a4', 'portrait');
         return  $pdf->download($data['app_name'].'.pdf');
     }
 }

@@ -26,9 +26,12 @@
     <p>*Subscription charge will cost “2”+ (VAT + SD + SC)/ day with Auto Renewal</p>
     <h4>Offer Details</h4>
     <p>1SMS.</p>
-    <h4>Support Contact</h4>
-    <p>{{$name}}</p>
-    <p>{{$email}}</p>
+
+    <p>
+    <strong>Support Contact</strong><br>
+        {{Auth::user()->name}}<br>
+        {{Auth::user()->email}}
+    </p>
 
 
 
