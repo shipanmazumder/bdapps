@@ -36,6 +36,7 @@ class SmsSender{
 			$this->applicationId = $applicationId;
 			$this->password = $password;
 			$this->serverURL = $serverURL;
+			$this->encoding = "8";
 		}
     }
 

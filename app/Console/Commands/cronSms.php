@@ -42,13 +42,12 @@ class cronSms extends Command
      */
     public function handle()
     {
-        Storage::put("cron_sms.txt","work");
-//        dd("s");
+        // Storage::put("time_cor.txt","work");
         $users=User::where("status",1)->get();
-//        dd($users);
         $url = "https://developer.bdapps.com/sms/send";
         if($users)
         {
+            $response='';
             foreach ($users as $key=>$value)
             {
                 $install_apps=InstallApp::where("user_id",$value->id)->get();
@@ -57,7 +56,7 @@ class cronSms extends Command
                     foreach ($install_apps as $a_key=>$a_value)
                     {
                         $where_condition=['app_id'=>$a_value->id,'is_sent'=>0];
-                        $sms_content=Schedule::where($where_condition)->orderBy("id","desc")->first();
+                        $sms_content=Schedule::where($where_condition)->orderBy("id","asc")->first();
                         $app_id = $a_value->app_id;
                         $message = isset($sms_content->content) ? $sms_content->content : "N/A" ;
                         $password = $a_value->password;
@@ -65,6 +64,7 @@ class cronSms extends Command
 
                         if(!empty($sms_content)){
                             $response =   $sms_ob->broadcast($message);
+                            //dd($response);
                             $res_obj = json_decode($response);
 
                             if($res_obj->statusCode == 'S1000'){
@@ -87,11 +87,13 @@ class cronSms extends Command
 
                         }else{
                             $response['message']= "Database is empty or no more unsent message available ! please insert content";
-                            return $response;
+
                         }
                     }
                 }
             }
+
+           return $response;
         }
     }
 }

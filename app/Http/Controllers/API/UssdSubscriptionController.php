@@ -8,7 +8,6 @@ use App\Http\Controllers\Controller;
 use App\InstallApp;
 use App\SubscriptionData;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
 class UssdSubscriptionController extends Controller
 {
@@ -34,17 +33,18 @@ class UssdSubscriptionController extends Controller
                     $api->subscriberId =$this->receiver->getAddress();
                     $check_status=$api->getstatus();
                     $check_status=json_decode($check_status);
-                    if($check_status->statusCode!="S1000")
+                    if($check_status->subscriptionStatus=="REGISTERED")
                     {
+                         $api->ussdresposemessage="You already register";
+
+
+                    }else{
                         $api->ussdresposemessage="You will get a confirmation sms.";
                         $api->subscribe();
                         $subscribe=new SubscriptionData;
                         $subscribe->app_id=$this->receiver->getApplicationId();
                         $subscribe->subscribe_id=$this->receiver->getAddress();
                         $subscribe->save();
-
-                    }else{
-                        $api->ussdresposemessage="You already register";
                     }
                     return  $api->ussdSend();
                 }
