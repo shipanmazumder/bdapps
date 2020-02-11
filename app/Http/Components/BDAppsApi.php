@@ -97,13 +97,15 @@ class BDAppsApi {
         if($this->isInvalid()) {
             return $this->errorOutput();
         }
-        $json = json_encode([
-            "applicationId" => $this->app_id,
-            "password" => $this->password,
-            "subscriberId" => $this->subscriberId,
-        ]);
+       $arrayField = array(
+         "applicationId" => $this->app_id,
+        "password" => $this->password,
+        "subscriberId" => $this->subscriberId
+        );
 
-        $this->url = 'https://developer.bdapps.com/subscription/send';
+
+        $json = json_encode($arrayField);
+        $this->url = 'https://developer.bdapps.com/subscription/getstatus';
         return $this->sendRequest($json);
     }
 

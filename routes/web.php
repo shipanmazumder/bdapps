@@ -11,8 +11,11 @@
 |
 */
 
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 Route::get('/', function () {
-    return view('welcome');
+    return view('login.login');
 });
 
 Auth::routes();
@@ -40,5 +43,7 @@ Route::group(['prefix'=>'user','middleware'=>['user','auth'],'namespace'=>'User'
     Route::post('/faq_generator', 'FaqController@faqGenerator');
     Route::get('/content', 'ContentController@index')->name('content');
     Route::post('/content', 'ContentController@sendSms');
+    Route::get('/schedule', 'ScheduleController@index')->name('schedule');
+    Route::post('/schedule', 'ScheduleController@store')->name('schedule');
 });
 Route::post('samples/ussd/SampleUssdApp.php', 'API\UssdSubscriptionController@index');

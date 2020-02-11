@@ -26,19 +26,15 @@ FAQ Generator
                                         <div class="panel-body">
                                             <div class="col-sm-12">
                                                 <div class="form-group">
-                                                    <label for="app_name">App Name</label><small class="req">*</small>
-                                                    <input  name="app_name" type="text" class="form-control" id="app_name"  requiredid="app_name" placeholder="App Name">
-                                                    @error('app_name')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                    @enderror
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <div class="form-group">
-                                                    <label for="app_id">App ID</label><small class="req">*</small>
-                                                    <input  name="app_id" type="text" class="form-control"  required id="app_id" placeholder="APP_XXXXXX">
+                                                    <label for="app_id">APP Name</label><small class="req">*</small><br/>
+                                                    <select name="app_id" id="app_id" class="form-control selectpicker " required data-container="body" data-live-search=true >
+                                                        <option value="">--Select--</option>
+                                                        @isset($app_name)
+                                                            @foreach($app_name as $value)
+                                                                <option value="{{$value->id}}">{{$value->app_name}}</option>
+                                                            @endforeach
+                                                        @endisset
+                                                    </select>
                                                     @error('app_id')
                                                     <span class="invalid-feedback" role="alert">
                                                         <strong>{{ $message }}</strong>

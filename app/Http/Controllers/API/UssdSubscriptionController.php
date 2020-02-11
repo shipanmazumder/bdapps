@@ -6,6 +6,7 @@ use App\Http\Components\BDAppsApi;
 use App\Http\Components\MoUssdReceiver;
 use App\Http\Controllers\Controller;
 use App\InstallApp;
+use App\SubscriptionData;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -31,7 +32,20 @@ class UssdSubscriptionController extends Controller
                     $api->ussdOperation = "mt-fin";
                     $api->version=$this->receiver->getVersion();
                     $api->subscriberId =$this->receiver->getAddress();
-                    $api->subscribe();
+                    $check_status=$api->getstatus();
+                    $check_status=json_decode($check_status);
+                    if($check_status->statusCode!="S1000")
+                    {
+                        $api->ussdresposemessage="You will get a confirmation sms.";
+                        $api->subscribe();
+                        $subscribe=new SubscriptionData;
+                        $subscribe->app_id=$this->receiver->getApplicationId();
+                        $subscribe->subscribe_id=$this->receiver->getAddress();
+                        $subscribe->save();
+
+                    }else{
+                        $api->ussdresposemessage="You already register";
+                    }
                     return  $api->ussdSend();
                 }
         }

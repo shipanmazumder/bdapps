@@ -55,7 +55,11 @@
 </head>
 
 <body class="fixed-left">
-
+    <div id="overlay">
+		<div class="cv-spinner">
+			<span class="spinner"></span>
+		</div>
+	</div>
     <!-- Begin page -->
     <div id="wrapper">
 

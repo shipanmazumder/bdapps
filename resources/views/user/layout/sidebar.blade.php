@@ -39,6 +39,9 @@
                     <li>
                         <a href="{{ route("user.content")}}" class="waves-effect {{set_Topmenu("content")}}"><i class="md  md-dashboard"></i><span> Content </span></a>
                     </li>
+                    <li>
+                        <a href="{{ route("user.schedule")}}" class="waves-effect {{set_Topmenu("schedule")}}"><i class="md  md-dashboard"></i><span> Schedule SMS </span></a>
+                    </li>
 {{--                    <li class="has_sub">--}}
 {{--                        <a href="#" class="waves-effect {{set_Topmenu("product")}}"><i class="md  md-settings-input-component"></i><span>Product</span><span class="pull-right"><i class="md md-add"></i></span></a>--}}
 {{--                        <ul class="list-unstyled">--}}

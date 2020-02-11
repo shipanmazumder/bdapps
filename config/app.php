@@ -55,6 +55,8 @@ return [
     'url' => env('APP_URL', 'http://localhost'),
 
     'asset_url' => env('ASSET_URL', null),
+    'total_install_limit' => env('APP_LIMIT', 6),
+    'app_phone' => env('APP_PHONE', "01834741581"),
 
     /*
     |--------------------------------------------------------------------------

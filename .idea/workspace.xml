@@ -2,27 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8c56b1d-8e75-40be-8522-ea883dea43c6" name="Default Changelist" comment="content send success">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/ScheduleController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Schedule.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/SubscriptionData.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_11_062243_create_schedules_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_02_11_075504_create_subscription_data_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/login/login.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/login/passwordChange.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/register/register.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/schedule/schedule.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Helpers/Util.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Helpers/Util.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Components/BDAppsApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Components/BDAppsApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Components/SmsSender.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Components/SmsSender.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/UssdSubscriptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/UssdSubscriptionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/DashboardController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/FaqController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/FaqController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/message.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/message.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/login/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/login/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/login/passwordChange.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/login/passwordChange.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UssdSubscriptionController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/InstallApp.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/InstallApp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/dashboard/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/dashboard/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/faq/faq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/faq/faq.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/faq/faqgenerate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/faq/faqgenerate.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/instruction/instruction.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/instruction/instruction.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/layout/message.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/layout/message.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/layout/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/layout/default.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/layout/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/layout/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/login/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/login/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/login/passwordChange.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/login/passwordChange.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,12 +163,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.toDoOptions" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\shipan7.2\htdocs\bdapps\resources\views" />
       <recent name="D:\shipan7.2\htdocs\bdapps\resources\views\admin" />
       <recent name="D:\shipan7.2\htdocs\bdapps\resources\views\user" />
     </key>
@@ -188,7 +193,7 @@
       <workItem from="1581220450965" duration="21610000" />
       <workItem from="1581247674073" duration="104000" />
       <workItem from="1581304723553" duration="15175000" />
-      <workItem from="1581392439740" duration="1674000" />
+      <workItem from="1581392439740" duration="23693000" />
     </task>
     <task id="LOCAL-00001" summary="instruction server ip fixed">
       <created>1581246374203</created>
@@ -233,10 +238,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="640" y="249" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581393132469" />
-    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1581394068946">
+    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1581394273919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581394068946" />
+    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581394273919" />
     <state x="540" y="256" key="IDE.errors.dialog" timestamp="1581228957433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -249,10 +254,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581247571459" />
-    <state width="600" height="424" key="javadoc.popup" timestamp="1581245094063">
+    <state width="600" height="424" key="javadoc.popup" timestamp="1581414562568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="600" height="424" key="javadoc.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581245094063" />
+    <state width="600" height="424" key="javadoc.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581414562568" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1581314416925">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

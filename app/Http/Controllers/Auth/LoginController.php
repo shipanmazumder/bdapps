@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -31,7 +32,6 @@ class LoginController extends Controller
 
     protected function redirectTo()
     {
-
         if (Auth::user()->role->id == 1) {
             return route('admin.dashboard');
 
@@ -54,5 +54,9 @@ class LoginController extends Controller
     public function username()
     {
         return 'phone';
+    }
+     protected function credentials(Request $request)
+    {
+        return ['phone'=>$request->{$this->username()},'password'=>$request->password,'status'=>1];
     }
 }

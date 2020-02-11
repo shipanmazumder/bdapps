@@ -5,13 +5,12 @@
 @section('main_section')
     <div class="content">
     <div class="container">
-
         <!-- Page-Title -->
         <div class="row">
             <div class="col-sm-12">
                 <h4 class="pull-left page-title">Welcome To Dashboard !</h4>
                 <ol class="breadcrumb pull-right">
-                    <li><a href="#">Admin</a></li>
+                    <li><a href="#">{{config('app.name')}}</a></li>
                     <li class="active">Dashboard</li>
                 </ol>
             </div>
@@ -19,7 +18,50 @@
 
         <!-- Start Widget -->
             <div class="row">
-                Login as {{ Auth::user()->name }}
+                <div class="col-md-4 col-sm-6 col-lg-3">
+                    <div class="mini-stat clearfix bx-shadow">
+                        <span class="mini-stat-icon bg-info"><i class="md  md-shopping-basket"></i></span>
+                        <div class="mini-stat-info text-right text-muted">
+                            <span class="counter">{{$install_app}}</span>
+                            Total Install
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3">
+                    <div class="mini-stat clearfix bx-shadow">
+                        <span class="mini-stat-icon bg-primary"><i class="md  md-wallet-giftcard"></i></span>
+                        <div class="mini-stat-info text-right text-muted">
+                            <span class="counter">{{$total_left}}</span>
+                            Total Left
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-lg-3">
+                    <div class="mini-stat clearfix bx-shadow">
+                        <span class="mini-stat-icon bg-info"><i class="fa fa-usd"></i></span>
+                        <div class="mini-stat-info text-right text-muted">
+                            <span class="counter">0.00</span>
+                           Monthly Fee
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                @isset($total_apps)
+                    @foreach($total_apps as $key=>$value)
+                        <a href="javascript:void(0)">
+                            <div class="col-md-4 col-sm-6 col-lg-3">
+                                <div class="mini-stat clearfix bx-shadow">
+                                    <span class="mini-stat-icon bg-{{$value['class_name']}}"><i class="md  md-picture-in-picture"></i></span>
+                                    <div class="mini-stat-info text-right text-muted">
+                                        <span class="counter"> {{$value['app_remain_sms']}}</span>
+                                        {{$value['app_name']}}
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    @endforeach
+                @endisset
             </div>
         </div> <!-- container -->
     </div>
