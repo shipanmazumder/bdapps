@@ -11,7 +11,14 @@ class PasswordController extends Controller
 {
    public function index()
     {
-        return view("login.passwordChange");
+        if(Auth::user()->role->id==1)
+        {
+            return view("login.adminpasswordChange");
+        }
+        else
+        {
+            return view("login.passwordChange");
+        }
     }
 
     public function changePassword(Request $request)

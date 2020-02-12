@@ -38,6 +38,8 @@ class LoginController extends Controller
         }
         elseif (Auth::user()->role->id == 2) {
             return route('user.dashboard');
+        }else{
+            return route('user.dashboard');
         }
     }
     /**

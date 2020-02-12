@@ -13,7 +13,7 @@ Schedule SMS
                     <form id="schedule_add">
                      @csrf
                     @method("POST")
-                        <div class="col-sm-6">
+                        <div class="col-sm-8">
                             <div class="panel panel-border panel-info">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">
