@@ -69,6 +69,8 @@ Schedule SMS
 <script src="{{asset("admin")}}/vendors/notifications/notify-metro.js"></script>
 <script src="{{asset("admin")}}/vendors/notifications/notifications.js"></script>
     <script >
+        var x=0;
+        var y=2;
         $(document).ready(function(){
             $('#content_body').on("keyup",'#sms_body',function(){
                 var chars = this.value.length,
@@ -93,6 +95,8 @@ Schedule SMS
                           $("#schedule_add").trigger("reset");
                           $(".content_body_sms_2").remove();
                           $(".selectpicker").selectpicker("refresh");
+                          y=2;
+                          x=1;
                     },
                     error:function (e) {
                         $.Notification.autoHideNotify('error', 'top right',"Something Wrong");
@@ -106,12 +110,9 @@ Schedule SMS
 
 <script>
      $(document).ready(function(){
-     	var x=0;
-     	var y=2;
         var maxField = 10; //Input fields increment limitation
         var addButton = $('.plus_button'); //Add button selector
         var wrapper = $('#content_body'); //Input field wrapper
-         var x = 1; //Initial field counter is 1
 
         //Once add button is clicked
         $('#content_body').on('click','.plus_button',function(){
