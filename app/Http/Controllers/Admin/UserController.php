@@ -28,7 +28,7 @@ class UserController extends Controller
     {
         $search_key=request()->input("search_key");
         $filter_by=request()->input("filter_by");
-        $users=User::orderBy("id","desc");
+        $users=User::orderBy("id","desc")->where("role_id",2);
         if($filter_by!='')
         {
             $users=$users->where('status',$filter_by);
