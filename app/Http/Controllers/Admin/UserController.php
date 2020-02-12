@@ -38,7 +38,7 @@ class UserController extends Controller
             $users=$users->where('email', 'like', '%' . $search_key . '%');
             $users=$users->orWhere('phone', 'like', '%' . $search_key . '%');
         }
-        $users=$users->paginate(3);
+        $users=$users->paginate(10);
         $this->data['users']=$users;
          $page=request()->input('page');
         if($page<=1)
@@ -47,7 +47,7 @@ class UserController extends Controller
         }
         else
         {
-            $this->data['sl_counter']=$page*3-2;
+            $this->data['sl_counter']=$page*10-9;
         }
         $returnHTML = view('admin.users.users_data')->with($this->data)->render();
         return response()->json(array('success' => true, 'html'=>$returnHTML));
