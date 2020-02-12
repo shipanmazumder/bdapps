@@ -1,9 +1,12 @@
-@extends('user.layout.default')
+@extends('layout.default')
 @section('title_area')
     Dashboard
 @endsection
 @section('main_section')
     <div class="content">
+     @if(Session::has('message'))
+        <div class="alert alert-{{Session::get("class")}}">{{Session::get("message")}}</div>
+     @endif
     <div class="container">
         <!-- Page-Title -->
         <div class="row">
@@ -22,7 +25,7 @@
                     <div class="mini-stat clearfix bx-shadow">
                         <span class="mini-stat-icon bg-info"><i class="md  md-shopping-basket"></i></span>
                         <div class="mini-stat-info text-right text-muted">
-                            <span class="counter">{{$install_app}}</span>
+                            <span class="">{{$install_app}}/{{config('app.total_install_limit')}}</span>
                             Total Install
                         </div>
                     </div>
@@ -49,10 +52,10 @@
             <div class="row">
                 @isset($total_apps)
                     @foreach($total_apps as $key=>$value)
-                        <a href="javascript:void(0)">
+                        <a href="{{url("user/app-content/".$value['id'])}}">
                             <div class="col-md-4 col-sm-6 col-lg-3">
                                 <div class="mini-stat clearfix bx-shadow">
-                                    <span class="mini-stat-icon bg-{{$value['class_name']}}"><i class="md  md-picture-in-picture"></i></span>
+                                    <span class="mini-stat-icon bg-{{$value['class_name']}}"><i class="md  md-question-answer"></i></span>
                                     <div class="mini-stat-info text-right text-muted">
                                         <span class="counter"> {{$value['app_remain_sms']}}</span>
                                         {{$value['app_name']}}

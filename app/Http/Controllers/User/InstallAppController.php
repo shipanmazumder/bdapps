@@ -28,6 +28,12 @@ class InstallAppController extends Controller
     {
         $this->data['add']=true;
         $this->data['category']=Category::all();
+        $limit=InstallApp::where("user_id",Auth::user()->id)->count();
+        if($limit>=config('app.total_install_limit'))
+        {
+            setMessage("message",'danger','Your App Limit Over');
+            return redirect()->route("user.dashboard");
+        }
         return view('user.installlapp.install',$this->data);
     }
 

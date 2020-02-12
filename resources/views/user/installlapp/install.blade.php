@@ -1,4 +1,4 @@
-@extends('user.layout.default')
+@extends('layout.default')
 @section('title_area')
 Install App
 @endsection

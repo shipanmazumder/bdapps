@@ -46,4 +46,17 @@ class User extends Authenticatable
     {
         return $this->hasMany("App\InstallApp");
     }
+
+    public function scopeActive($query)
+    {
+        return $query->where("status",1);
+    }
+    public function scopePending($query)
+    {
+        return $query->where("status",2);
+    }
+    public function scopeNew($query)
+    {
+        return $query->where("status",0);
+    }
 }

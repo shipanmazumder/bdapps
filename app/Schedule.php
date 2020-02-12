@@ -8,6 +8,6 @@ class Schedule extends Model
 {
     public function installApp()
     {
-        return $this->belongsTo("App\InstallApp");
+        return $this->belongsTo("\App\InstallApp",'app_id');
     }
 }

@@ -21,17 +21,26 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+/**
+ * admin route
+ */
 Route::group(['prefix'=>'admin','middleware'=>['admin','auth'],'namespace'=>'Admin','as'=>'admin.'],function() {
 
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+    Route::get('/users', 'UserController@index')->name('user');
+    Route::get('/user-view', 'UserController@view');
+    Route::get('/control/{user_id}', 'UserController@control');
+    Route::get('/user-edit/{user_id}', 'UserController@userEdit');
+    Route::post('/user-edit/{user_id}', 'UserController@userUpdate');
 });
 
+/**
+ * user route
+ */
 Route::group(['prefix'=>'user','middleware'=>['user','auth'],'namespace'=>'User','as'=>'user.'],function(){
 
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
     Route::get('/instruction', 'InstructionController@index')->name('instruction');
-//    Route::get('/install', 'InstallAppController@index')->name('install');
 
     Route::resource("installapp",'InstallAppController')->names([
         'index' => 'install',
@@ -45,5 +54,18 @@ Route::group(['prefix'=>'user','middleware'=>['user','auth'],'namespace'=>'User'
     Route::post('/content', 'ContentController@sendSms');
     Route::get('/schedule', 'ScheduleController@index')->name('schedule');
     Route::post('/schedule', 'ScheduleController@store')->name('schedule');
+    Route::get('/app-content/{app_id}', 'ScheduleController@appContent');
 });
+
+/**
+ * bd apps api
+ */
 Route::post('samples/ussd/SampleUssdApp.php', 'API\UssdSubscriptionController@index');
+
+/**
+ * universal route
+ */
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/password-change', 'PasswordController@index')->name('password_change');
+    Route::post('/password-change', 'PasswordController@changePassword');
+});

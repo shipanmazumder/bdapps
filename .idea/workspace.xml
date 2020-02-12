@@ -2,11 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8c56b1d-8e75-40be-8522-ea883dea43c6" name="Default Changelist" comment="content send success">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PasswordController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/user-edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/users.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/users_data.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/schedule/app-content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Commands/cronSms.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/cronSms.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Components/SmsSender.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Components/SmsSender.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/UssdSubscriptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/UssdSubscriptionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/ContentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/ContentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/InstallAppController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/InstallAppController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/ScheduleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/ScheduleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/InstallApp.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/InstallApp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Schedule.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Schedule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/login/login.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/login/passwordChange.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/login/passwordChange.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login/passwordChange.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/content/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/content/content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/dashboard/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/dashboard/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/faq/faq.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/faq/faq.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/installlapp/install.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/installlapp/install.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/instruction/instruction.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/instruction/instruction.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/layout/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/default.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/layout/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/layout/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/layout/message.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/message.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/layout/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/schedule/schedule.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/schedule/schedule.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,11 +173,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blog" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.toDoOptions" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\shipan7.2\htdocs\bdapps\resources\views" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\shipan7.2\htdocs\bdapps\resources\views" />
       <recent name="D:\shipan7.2\htdocs\bdapps\resources\views\admin" />
@@ -173,7 +207,8 @@
       <workItem from="1581247674073" duration="104000" />
       <workItem from="1581304723553" duration="15175000" />
       <workItem from="1581392439740" duration="27944000" />
-      <workItem from="1581435347458" duration="4820000" />
+      <workItem from="1581478905900" duration="1456000" />
+      <workItem from="1581483153224" duration="20265000" />
     </task>
     <task id="LOCAL-00001" summary="instruction server ip fixed">
       <created>1581246374203</created>
@@ -214,14 +249,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="600" y="288" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581239550655" />
-    <state x="640" y="249" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581393132469">
+    <state x="640" y="249" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1581478877766">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="640" y="249" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581393132469" />
+    <state x="640" y="249" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581478877766" />
     <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1581394273919">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581394273919" />
+    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1581481711953">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581481711953" />
     <state x="540" y="256" key="IDE.errors.dialog" timestamp="1581228957433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -234,18 +273,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581247571459" />
-    <state width="427" height="297" key="javadoc.popup" timestamp="1581440900815">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="600" height="424" key="javadoc.popup" timestamp="1581419563855">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="427" height="297" key="javadoc.popup/0.0.1366.728@0.0.1366.728" timestamp="1581440900815" />
     <state width="600" height="424" key="javadoc.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581419563855" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1581314416925">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581314416925" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1581234888049">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1581484887941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581234888049" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581484887941" />
   </component>
 </project>

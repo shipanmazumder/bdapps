@@ -15,9 +15,9 @@ class InstallApp extends Model
         return $this->belongsTo("App\User");
     }
 
-    public function schedule()
+    public function schedules()
     {
-        return $this->hasMany("App\Schedule");
+        return $this->hasMany(Schedule::class,'id');
     }
 
     public function get_app_details()
@@ -27,6 +27,7 @@ class InstallApp extends Model
         if($apps)
         {
             foreach ($apps as $key=>$value) {
+                $data[$key]['id']=$value->id;
                 $data[$key]['app_name']=$value->app_name;
                 $data[$key]['total_subscriber']=0;
                 $where_match=['app_id'=>$value->id,"is_sent"=>0];

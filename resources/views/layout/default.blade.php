@@ -64,12 +64,12 @@
     <div id="wrapper">
 
         <!-- Top Bar Start -->
-        @include('user.layout.header')
+        @include('layout.header')
         <!-- Top Bar End -->
 
         <!-- ========== Left Sidebar Start ========== -->
 
-        @include('user.layout.sidebar')
+        @include('layout.sidebar')
         <!-- Left Sidebar End -->
         <!-- ============================================================== -->
         <!-- Start right Content here -->
@@ -79,7 +79,7 @@
            @yield('main_section')
             <!-- content -->
 
-            @include('user.layout.footer')
+            @include('layout.footer')
 
         </div>
         <!-- ============================================================== -->

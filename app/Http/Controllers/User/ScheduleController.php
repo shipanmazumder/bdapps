@@ -7,6 +7,7 @@ use App\InstallApp;
 use App\Schedule;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Session;
 class ScheduleController extends Controller
 {
@@ -47,6 +48,27 @@ class ScheduleController extends Controller
         }
         Schedule::insert($data);
         return response()->json(['success'=>"Content Upload Successfully"]);
+    }
+
+    public function appContent($app_id,Request $request)
+    {
+        $where_condition=['app_id'=>$app_id,'is_sent'=>false];
+        $this->data['content']=Schedule::with("installApp")->where($where_condition)->paginate(10);
+        if(count($this->data['content'])<=0)
+        {
+            setMessage("message",'danger','No Schedule Content Found');
+            return redirect()->route("user.dashboard");
+        }
+        $page=$request->input('page');
+        if($page<=1)
+        {
+            $this->data['sl_counter']=1;
+        }
+        else
+        {
+            $this->data['sl_counter']=$page*10-9;
+        }
+        return view('user.schedule.app-content',$this->data);
     }
 
 }

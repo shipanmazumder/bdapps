@@ -25,7 +25,10 @@
             <div id="sidebar-menu">
                 <ul>
                     <li>
-                    <a href="{{ route("admin.dashboard")}}" class="waves-effect {{set_Topmenu("dashboard")}}"><i class="md md-home"></i><span> Dashboard </span></a>
+                        <a href="{{ route("admin.dashboard")}}" class="waves-effect {{set_Topmenu("dashboard")}}"><i class="md md-home"></i><span> Dashboard </span></a>
+                    </li>
+                    <li>
+                        <a href="{{ route("admin.user")}}" class="waves-effect {{set_Topmenu("user")}}"><i class="fa fa-user"></i><span> Users </span></a>
                     </li>
 
 {{--                    <li class="has_sub">--}}

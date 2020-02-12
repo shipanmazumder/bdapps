@@ -25,7 +25,7 @@
                                         <div class="col-sm-3">
                                             <div class="form-group">
                                                 <label for="email">Email</label><small class="req">*</small>
-                                                <input   name="email" type="email" value="{{ Auth::user()->email  }}" class="form-control" id="email">
+                                                <input {{Auth::user()->role->id==2?"readonly":""}}  name="email" type="email" value="{{ Auth::user()->email  }}" class="form-control" id="email">
                                                 <input   name="id" type="hidden" value="@isset($single){{  $single->id }} @endisset">
                                                 @error('email')
                                                 <span class="invalid-feedback" role="alert">

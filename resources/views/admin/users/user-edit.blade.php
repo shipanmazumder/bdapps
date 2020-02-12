@@ -1,6 +1,6 @@
-@extends('layout.default')
+@extends('admin.layout.default')
 @section('title_area')
-Content
+User Information
 @endsection
 @section('main_section')
     <div class="content">
@@ -10,24 +10,23 @@ Content
              @endif
             <!-- Start Widget -->
                 <div class="row">
-                    {!! Form::open(['url' => 'user/content']) !!}
+                    {!! Form::open(['url' => 'admin/user-edit/'.$single->id]) !!}
                     @method("POST")
                         <div class="col-sm-6">
                             <div class="panel panel-border panel-info">
                                 <div class="panel-heading">
                                     <h3 class="panel-title">
                                         <a data-toggle="collapse" data-parent="#accordion-test" href="#collapseOne" class="collapsed">
-                                           Content
+                                          User Information modify
                                         </a>
                                     </h3>
                                 </div>
                                     <div class="panel-body">
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <label for="sms_body">SMS Body</label><small class="req">*</small><br/>
-                                                <textarea name="sms_body" maxlength="300" required class="form-control" placeholder="Type Your SMS" id="sms_body" cols="30" rows="5"></textarea>
-                                                <code id="remaining">300 characters remaining</code>
-                                                @error('sms_body')
+                                                <label for="name">Name</label><small class="req">*</small><br/>
+                                                <input type="text" value="{{$single->name}}" name="name" required placeholder="Name" class="form-control">
+                                                @error('name')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
@@ -36,16 +35,9 @@ Content
                                         </div>
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <label for="app_id">APP Name</label><small class="req">*</small><br/>
-                                                <select name="app_id" id="app_id" class="form-control selectpicker " required data-container="body" data-live-search=true >
-                                                    <option value="">--Select--</option>
-                                                    @isset($app_name)
-                                                        @foreach($app_name as $value)
-                                                            <option value="{{$value->id}}">{{$value->app_name}}</option>
-                                                        @endforeach
-                                                    @endisset
-                                                </select>
-                                                @error('app_id')
+                                                <label for="phone">Phone</label><small class="req">*</small><br/>
+                                                <input type="text" value="{{$single->phone}}" name="phone" required placeholder="Phone" class="form-control">
+                                                @error('phone')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
@@ -53,8 +45,25 @@ Content
                                             </div>
                                         </div>
                                         <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label for="email">Email</label><small class="req">*</small><br/>
+                                                <input type="email" value="{{$single->email}}" name="email" required placeholder="Email" class="form-control">
+                                                @error('email')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label for="password">Password</label>
+                                                <input type="password"  placeholder="Password" name="password" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
                                             <div class="form-group pull-right m-t-22">
-                                                <input type="submit" class=" btn btn-primary pull-right" value="Send SMS" name="submit" />
+                                                <input type="submit" class=" btn btn-primary pull-right" value="Update" name="submit" />
                                             </div>
                                         </div>
                                     </div> <!-- panel-body -->
@@ -64,13 +73,4 @@ Content
                 </div>
         </div> <!-- container -->
     </div>
-    <script >
-        $(document).ready(function(){
-            $('#sms_body').on("keyup",function(){
-                var chars = this.value.length,
-                    remaining = 300-chars;
-               $('#remaining').text(remaining + ' characters remaining');
-            });
-        });
-    </script>
 @endsection

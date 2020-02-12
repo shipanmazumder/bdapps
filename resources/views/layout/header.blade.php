@@ -23,6 +23,7 @@
                         <li class="dropdown">
                             <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{ asset("admin")}}/images/logo.png" alt="user-img" class="img-circle"> </a>
                             <ul class="dropdown-menu">
+                                    <li><a href="{{ route("password_change") }}"><i class="md md-settings"></i> Reset Profile</a></li>
                                 <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="md md-settings-power"></i> Logout</a></li>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
