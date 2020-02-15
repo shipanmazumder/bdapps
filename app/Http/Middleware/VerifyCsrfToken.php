@@ -19,6 +19,7 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-         "samples/ussd/SampleUssdApp.php"
+         "bdapps/ussd",
+         "bdapps/sms",
     ];
 }

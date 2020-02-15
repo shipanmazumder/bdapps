@@ -22,8 +22,8 @@ class InstructionController extends Controller
     {
         $ip = gethostbyname($_SERVER['SERVER_NAME']);
         $this->data['host_address']=$ip;
-        $this->data['sms_url']="https://www.shipansm.com/phpapp/samples/sms/SampleSmsApp.php";
-        $this->data['ussd_url']="https://www.shipansm.com/phpapp/samples/ussd/SampleUssdApp.php";
+        $this->data['sms_url']="http://dev.allbdsms.com/bdapps/sms";
+        $this->data['ussd_url']="http://dev.allbdsms.com/bdapps/ussd";
         return view("user.instruction.instruction",$this->data);
     }
 }

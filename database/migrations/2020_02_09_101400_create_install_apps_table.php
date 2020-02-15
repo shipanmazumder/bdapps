@@ -23,7 +23,8 @@ class CreateInstallAppsTable extends Migration
             $table->tinyInteger('sms_time_format');
             $table->smallInteger('category_id');
             $table->index('user_id');
-            $table->timestamps();
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
 

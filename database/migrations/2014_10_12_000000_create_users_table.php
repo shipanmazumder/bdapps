@@ -24,7 +24,8 @@ class CreateUsersTable extends Migration
             $table->tinyInteger('status')->default(1);
             $table->index("status");
             $table->rememberToken();
-            $table->timestamps();
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
 

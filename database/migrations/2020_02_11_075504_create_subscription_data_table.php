@@ -17,7 +17,8 @@ class CreateSubscriptionDataTable extends Migration
             $table->bigIncrements('id');
             $table->string('app_id');
             $table->string('subscribe_id');
-            $table->timestamps();
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
 

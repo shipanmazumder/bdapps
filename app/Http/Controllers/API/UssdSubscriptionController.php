@@ -51,8 +51,4 @@ class UssdSubscriptionController extends Controller
             }
         }
     }
-    function loadUssdSender()
-    {
-
-    }
 }

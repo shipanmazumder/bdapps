@@ -50,17 +50,18 @@ Route::group(['prefix'=>'user','middleware'=>['user','auth'],'namespace'=>'User'
     Route::post('/install', 'InstallAppController@store');
     Route::get('/faq-generator', 'FaqController@index')->name('faq');
     Route::post('/faq_generator', 'FaqController@faqGenerator');
+    Route::get('/sendsms', 'SendSmsController@index')->name('sendsms');
+    Route::post('/sendsms', 'SendSmsController@sendSms');
     Route::get('/content', 'ContentController@index')->name('content');
-    Route::post('/content', 'ContentController@sendSms');
-    Route::get('/schedule', 'ScheduleController@index')->name('schedule');
-    Route::post('/schedule', 'ScheduleController@store')->name('schedule');
-    Route::get('/app-content/{app_id}', 'ScheduleController@appContent');
+    Route::post('/content', 'ContentController@store')->name('content');
+    Route::get('/app-content/{app_id}', 'ContentController@appContent');
 });
 
 /**
  * bd apps api
  */
-Route::post('samples/ussd/SampleUssdApp.php', 'API\UssdSubscriptionController@index');
+Route::post('bdapps/ussd', 'API\UssdSubscriptionController@index');
+Route::post('bdapps/sms', 'API\SMSSubscriptionController@index');
 
 /**
  * universal route

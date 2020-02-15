@@ -4,7 +4,7 @@ namespace App\Console\Commands;
 
 use App\Http\Components\SmsSender;
 use App\InstallApp;
-use App\Schedule;
+use App\Content;
 use App\User;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
@@ -56,7 +56,7 @@ class cronSms extends Command
                     foreach ($install_apps as $a_key=>$a_value)
                     {
                         $where_condition=['app_id'=>$a_value->id,'is_sent'=>0];
-                        $sms_content=Schedule::where($where_condition)->orderBy("id","asc")->first();
+                        $sms_content=Content::where($where_condition)->orderBy("id","asc")->first();
                         $app_id = $a_value->app_id;
                         $message = isset($sms_content->content) ? $sms_content->content : "N/A" ;
                         $password = $a_value->password;

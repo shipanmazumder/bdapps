@@ -4,22 +4,22 @@
 @endsection
 @section('main_section')
     <div class="content">
-     @if(Session::has('message'))
-        <div class="alert alert-{{Session::get("class")}}">{{Session::get("message")}}</div>
-     @endif
-    <div class="container">
-        <!-- Page-Title -->
-        <div class="row">
-            <div class="col-sm-12">
-                <h4 class="pull-left page-title">Welcome To Dashboard !</h4>
-                <ol class="breadcrumb pull-right">
-                    <li><a href="#">{{config('app.name')}}</a></li>
-                    <li class="active">Dashboard</li>
-                </ol>
+        @if(Session::has('message'))
+            <div class="alert alert-{{Session::get("class")}}">{{Session::get("message")}}</div>
+        @endif
+        <div class="container">
+            <!-- Page-Title -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4 class="pull-left page-title">Welcome To Dashboard !</h4>
+                    <ol class="breadcrumb pull-right">
+                        <li><a href="#">{{config('app.name')}}</a></li>
+                        <li class="active">Dashboard</li>
+                    </ol>
+                </div>
             </div>
-        </div>
 
-        <!-- Start Widget -->
+            <!-- Start Widget -->
             <div class="row">
                 <div class="col-md-4 col-sm-6 col-lg-3">
                     <div class="mini-stat clearfix bx-shadow">
@@ -44,7 +44,7 @@
                         <span class="mini-stat-icon bg-info"><i class="fa fa-usd"></i></span>
                         <div class="mini-stat-info text-right text-muted">
                             <span class="counter">0.00</span>
-                           Monthly Fee
+                            Monthly Fee
                         </div>
                     </div>
                 </div>

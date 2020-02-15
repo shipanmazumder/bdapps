@@ -2,7 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8c56b1d-8e75-40be-8522-ea883dea43c6" name="Default Changelist" comment="content send success">
+      <change afterPath="$PROJECT_DIR$/app/Content.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/API/SMSSubscriptionController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/User/SendSmsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/sendsms/sendsms.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/cronSms.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/cronSms.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/UssdSubscriptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/UssdSubscriptionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/ContentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/ContentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/InstructionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/InstructionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/ScheduleController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/InstallApp.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/InstallApp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Schedule.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_09_060428_create_roles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_09_060428_create_roles_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_09_101400_create_install_apps_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_09_101400_create_install_apps_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_09_102704_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_09_102704_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_11_062243_create_schedules_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_15_072227_create_contents_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_11_075504_create_subscription_data_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_11_075504_create_subscription_data_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/content/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/content/content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/dashboard/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/dashboard/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/schedule/app-content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/content/app-content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/schedule/schedule.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,17 +172,18 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../blog" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\shipan7.2\htdocs\bdapps\resources\views\user\content" />
+      <recent name="G:\shipan\htdocs\bdapps\resources\views\user" />
+      <recent name="D:\shipan7.2\htdocs\bdapps\resources\views" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\shipan7.2\htdocs\bdapps\resources\views" />
       <recent name="D:\shipan7.2\htdocs\bdapps\resources\views\admin" />
       <recent name="D:\shipan7.2\htdocs\bdapps\resources\views\user" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\shipan\htdocs\bdapps\resources\views\user" />
-      <recent name="D:\shipan7.2\htdocs\bdapps\resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -185,7 +211,7 @@
       <workItem from="1581519258564" duration="1026000" />
       <workItem from="1581520738756" duration="1485000" />
       <workItem from="1581745164799" duration="199000" />
-      <workItem from="1581745397039" duration="3290000" />
+      <workItem from="1581745397039" duration="6921000" />
     </task>
     <task id="LOCAL-00001" summary="instruction server ip fixed">
       <created>1581246374203</created>
@@ -255,28 +281,28 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581228957433" />
-    <state x="328" y="13" key="SettingsEditor" timestamp="1581745561945">
+    <state x="328" y="13" key="SettingsEditor" timestamp="1581751080448">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="328" y="13" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1581745561945" />
+    <state x="328" y="13" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1581751080448" />
     <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581239476554" />
     <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581247571459">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581247571459" />
-    <state width="427" height="297" key="javadoc.popup" timestamp="1581748106076">
+    <state width="427" height="297" key="javadoc.popup" timestamp="1581752403028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="427" height="297" key="javadoc.popup/0.0.1366.728@0.0.1366.728" timestamp="1581748106076" />
+    <state width="427" height="297" key="javadoc.popup/0.0.1366.728@0.0.1366.728" timestamp="1581752403028" />
     <state width="600" height="424" key="javadoc.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581419563855" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1581314416925">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581314416925" />
-    <state x="443" y="158" width="672" height="475" key="search.everywhere.popup" timestamp="1581747505425">
+    <state x="443" y="158" width="672" height="475" key="search.everywhere.popup" timestamp="1581752689579">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="443" y="158" width="672" height="475" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1581747505425" />
+    <state x="443" y="158" width="672" height="475" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1581752689579" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581484887941" />
   </component>
 </project>
