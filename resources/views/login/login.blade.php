@@ -56,7 +56,7 @@
                             @csrf
                     <div class="form-group ">
                         <div class="col-xs-12">
-                                <input id="phone" type="text" class="input-lg form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="email" placeholder="Mobile Number" autofocus>
+                                <input id="phone" type="text" class="input-lg form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="on" placeholder="Mobile Number" autofocus>
 
                                 @error('phone')
                                     <span class="invalid-feedback" role="alert">
