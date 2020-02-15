@@ -20,34 +20,35 @@ class UssdSubscriptionController extends Controller
         $this->receiver->getAddress();
         if($this->receiver->getUssdOperation()=="mo-init")
         {
-                $appId = $this->receiver->getApplicationId();
-                $app_pass = InstallApp::where('app_id', $appId)->first();
-                if($app_pass) {
-                    $api = new BDAppsApi;
-                    $api->app_id = $appId;
-                    $api->password = $app_pass->password;
-                    $api->destinationAddress = $this->receiver->getAddress();
-                    $api->sessionId = $this->receiver->getSessionId();
-                    $api->ussdOperation = "mt-fin";
-                    $api->version=$this->receiver->getVersion();
-                    $api->subscriberId =$this->receiver->getAddress();
-                    $check_status=$api->getstatus();
-                    $check_status=json_decode($check_status);
-                    if($check_status->subscriptionStatus=="REGISTERED")
-                    {
-                         $api->ussdresposemessage="You already register";
-
-
-                    }else{
-                        $api->ussdresposemessage="You will get a confirmation sms.";
-                        $api->subscribe();
-                        $subscribe=new SubscriptionData;
-                        $subscribe->app_id=$this->receiver->getApplicationId();
-                        $subscribe->subscribe_id=$this->receiver->getAddress();
-                        $subscribe->save();
-                    }
-                    return  $api->ussdSend();
+            $appId = $this->receiver->getApplicationId();
+            $app_pass = InstallApp::where('app_id', $appId)->first();
+            if($app_pass) {
+                $api = new BDAppsApi;
+                $api->app_id = $appId;
+                $api->password = $app_pass->password;
+                $api->destinationAddress = $this->receiver->getAddress();
+                $api->sessionId = $this->receiver->getSessionId();
+                $api->ussdOperation = "mt-fin";
+                $api->version=$this->receiver->getVersion();
+                $api->subscriberId =$this->receiver->getAddress();
+                $check_status=$api->getstatus();
+                $response="";
+                $check_status=json_decode($check_status);
+                if($check_status->subscriptionStatus=="REGISTERED")
+                {
+                    $api->ussdresposemessage="You already register";
+                    $response=$api->ussdSend();
+                }else{
+                    $api->ussdresposemessage="You will get a confirmation sms.";
+                    $response=$api->ussdSend();
+                    $api->subscribe();
+                    $subscribe=new SubscriptionData;
+                    $subscribe->app_id=$this->receiver->getApplicationId();
+                    $subscribe->subscribe_id=$this->receiver->getAddress();
+                    $subscribe->save();
                 }
+                return  $response;
+            }
         }
     }
     function loadUssdSender()
