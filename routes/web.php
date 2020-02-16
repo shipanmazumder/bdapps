@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 /**
  * admin route
  */
@@ -32,6 +32,8 @@ Route::group(['prefix'=>'admin','middleware'=>['admin','auth'],'namespace'=>'Adm
     Route::get('/control/{user_id}', 'UserController@control');
     Route::get('/user-edit/{user_id}', 'UserController@userEdit');
     Route::post('/user-edit/{user_id}', 'UserController@userUpdate');
+    Route::get('/login/{user_id}', 'UserController@login');
+
 });
 
 /**

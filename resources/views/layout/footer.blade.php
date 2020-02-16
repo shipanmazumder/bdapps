@@ -1,3 +1,3 @@
 <footer class="footer text-right">
-        {{date("Y")}} © BDAPPS DAIRY.
+        {{date("Y")}} © albdsms.
     </footer>

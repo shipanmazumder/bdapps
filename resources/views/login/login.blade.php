@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name = "viewport" content = "width = device-width, user-scalable = 0, initial-scale = 1.0, maximum-scale = 1.0" />
         <meta name="description" content="{{config("app.site_name")}}">
         <meta name="author" content="{{config("app.site_name")}}">
 
@@ -39,7 +39,6 @@
                     border: 1px solid #ddd!important;
                 }
             </style>
-        <script src="{{ asset("admin")}}/js/modernizr.min.js"></script>
 
     </head>
     <body>
@@ -54,27 +53,29 @@
                 <div class="panel-body">
                     <form method="POST" action="{{ route('login') }}">
                             @csrf
-                    <div class="form-group ">
-                        <div class="col-xs-12">
-                                <input id="phone" type="text" class="input-lg form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="on" placeholder="Mobile Number" autofocus>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" placeholder="Mobile Number" name="phone" value="{{ old('phone') }}" required >
 
                                 @error('phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-xs-12 m-t-10">
-                            <input class="form-control input-lg @error('password') is-invalid @enderror" type="password" name="password" required="" placeholder="Password">
-                            @error('password')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+
+                        <div class="form-group">
+                            <div class="col-md-12 m-t-10">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="password" placeholder="Password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                         </div>
-                    </div>
 
                     <div class="form-group text-center">
                         <div class="col-xs-12 m-t-10">

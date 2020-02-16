@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 use Session;
 use Symfony\Component\Console\Input\Input;
 
@@ -117,5 +119,13 @@ class UserController extends Controller
         $email=request()->input("email");
         $where=["email"=>$email];
         return User::where($where)->where('id', '!=',$user_id)->first();
+    }
+
+    public function login($user_id)
+    {
+//        dd($user);
+       Auth::loginUsingId($user_id);
+       return redirect()->route("user.dashboard");
+//        dd($user);
     }
 }
