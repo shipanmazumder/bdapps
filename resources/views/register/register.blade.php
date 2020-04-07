@@ -94,6 +94,19 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="form-group">
+
+                            <div class="col-md-12">
+                                <label for="versity_name">{{ __('University Name:') }}</label>
+                                <input id="versity_name" type="versity_name" class="form-control @error('versity_name') is-invalid @enderror" name="versity_name" value="{{ old('versity_name') }}"  autocomplete="versity_name">
+
+                                @error('versity_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
                         <div class="form-group">
                             <div class="col-md-12">

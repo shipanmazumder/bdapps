@@ -2,15 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8c56b1d-8e75-40be-8522-ea883dea43c6" name="Default Changelist" comment="content send success">
-      <change afterPath="$PROJECT_DIR$/bootstrap.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/login/default.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_16_163216_add_versity_name_to_users_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_04_07_141406_add_approved_by_to_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_15_072227_create_contents_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_15_072227_create_contents_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/user-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/user-edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/users.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/users.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/users/users_data.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/users_data.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/login/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/register/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/register/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +160,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lsms" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
   </component>
@@ -196,7 +202,12 @@
       <workItem from="1581520738756" duration="1485000" />
       <workItem from="1581745164799" duration="199000" />
       <workItem from="1581745397039" duration="8304000" />
-      <workItem from="1581813103445" duration="7399000" />
+      <workItem from="1581813103445" duration="8873000" />
+      <workItem from="1583686019233" duration="1465000" />
+      <workItem from="1584114649059" duration="215000" />
+      <workItem from="1584367310766" duration="3532000" />
+      <workItem from="1584624752172" duration="329000" />
+      <workItem from="1586268674819" duration="4959000" />
     </task>
     <task id="LOCAL-00001" summary="instruction server ip fixed">
       <created>1581246374203</created>
@@ -258,18 +269,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581394273919" />
-    <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1581481711953">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="526" y="193" key="FileChooserDialogImpl" timestamp="1584625089083">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="526" y="193" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584625089083" />
     <state x="740" y="276" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581481711953" />
     <state x="540" y="256" key="IDE.errors.dialog" timestamp="1581228957433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581228957433" />
-    <state x="328" y="13" key="SettingsEditor" timestamp="1581815795764">
+    <state x="328" y="13" key="SettingsEditor" timestamp="1586268967108">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="328" y="13" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1581815795764" />
+    <state x="328" y="13" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1586268967108" />
     <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581239476554" />
     <state x="769" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1581247571459">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -285,10 +297,10 @@
     </state>
     <state x="438" y="168" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1581819265362" />
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581314416925" />
-    <state x="443" y="158" width="672" height="475" key="search.everywhere.popup" timestamp="1581814660263">
+    <state x="443" y="158" width="672" height="475" key="search.everywhere.popup" timestamp="1584376752203">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="443" y="158" width="672" height="475" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1581814660263" />
+    <state x="443" y="158" width="672" height="475" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1584376752203" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581484887941" />
   </component>
 </project>

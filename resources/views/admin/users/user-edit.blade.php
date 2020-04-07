@@ -57,6 +57,17 @@ User Information
                                         </div>
                                         <div class="col-sm-12">
                                             <div class="form-group">
+                                                <label for="versity_name">University</label><small class="req">*</small><br/>
+                                                <input type="text" value="{{$single->versity_name}}" name="versity_name" required placeholder="University Name" class="form-control">
+                                                @error('versity_name')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
                                                 <label for="password">Password</label>
                                                 <input type="password"  placeholder="Password" name="password" class="form-control">
                                             </div>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Session;
 use Symfony\Component\Console\Input\Input;
@@ -22,23 +23,30 @@ class UserController extends Controller
     }
     public function index()
     {
-
-        return view("admin.users.users");
+        $this->data['users']=User::where("role_id",1)->get();
+        return view("admin.users.users",$this->data);
     }
 
     public function view()
     {
         $search_key=request()->input("search_key");
         $filter_by=request()->input("filter_by");
-        $users=User::orderBy("id","desc")->where("role_id",2);
+        $approved_by=request()->input("approved_by");
+        $users=User::with("approver")->orderBy("id","desc")
+            ->where("role_id",2);
         if($filter_by!='')
         {
             $users=$users->where('status',$filter_by);
+        }
+        if($approved_by!='')
+        {
+            $users=$users->where('approved_by',$approved_by);
         }
         if($search_key!='')
         {
             $users=$users->where('email', 'like', '%' . $search_key . '%');
             $users=$users->orWhere('phone', 'like', '%' . $search_key . '%');
+            $users=$users->orWhere('versity_name', 'like', '%' . $search_key . '%');
         }
         $users=$users->paginate(10);
         $this->data['users']=$users;
@@ -66,6 +74,7 @@ class UserController extends Controller
         else if($user->status==0)
         {
             $user->status=1;
+            $user->approved_by=Auth::id();
         }
         else if($user->status==2)
         {
@@ -89,6 +98,7 @@ class UserController extends Controller
         $user->name=request()->input("name");
         $user->phone=request()->input("phone");
         $user->email=request()->input("email");
+        $user->versity_name=request()->input("versity_name");
         if($this->phoneCheck($user_id))
         {
               setMessage("message","danger","Phone already exits.");

@@ -1,3 +1,3 @@
 <footer class="footer text-right">
-        {{date("Y")}} © albdsms.
+        {{date("Y")}} © allbdsms.
     </footer>

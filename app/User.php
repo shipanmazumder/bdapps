@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'phone','email', 'password','status'
+        'name', 'phone','email', 'password','status',"versity_name"
     ];
 
     /**
@@ -58,5 +58,10 @@ class User extends Authenticatable
     public function scopeNew($query)
     {
         return $query->where("status",0);
+    }
+
+    public function approver()
+    {
+        return $this->belongsTo(\App\User::class,"approved_by");
     }
 }
