@@ -20,6 +20,10 @@
                         <li class="hidden-xs">
                             <a href="#" id="btn-fullscreen" class="waves-effect waves-light"><i class="md md-crop-free"></i></a>
                         </li>
+                        <li class="hidden-xs">
+                            <a href="javascript:void(0)" id="btn-fullscreen" class="waves-effect waves-light">
+                            {{auth()->user()->name}}</a>
+                        </li>
                         <li class="dropdown">
                             <a href="" class="dropdown-toggle profile" data-toggle="dropdown" aria-expanded="true"><img src="{{ asset("admin")}}/images/logo.png" alt="user-img" class="img-circle"> </a>
                             <ul class="dropdown-menu">

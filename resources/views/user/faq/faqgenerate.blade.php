@@ -6,8 +6,26 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{$app_name}}</title>
+    <style type="text/css">
+         #watermark {
+            position: fixed;
+            font-size: 15px;
+            top: -20;
+            width: 100%;
+            text-align: center;
+            opacity: .5;
+            word-spacing: 150px;
+            text-transform: uppercase;
+            /*transform: rotate(-10deg);*/
+            transform-origin: 50% 50%;
+            z-index: -1000;
+          }
+    </style>
 </head>
 <body>
+    <div id="watermark">
+         allbdsms allbdsms allbdsms
+      </div>
     <h1>{{$app_name}}</h1>
     <p><strong>App Name:</strong> {{$app_name}}</p>
     <p><strong>App ID:</strong> {{$app_id}}</p>

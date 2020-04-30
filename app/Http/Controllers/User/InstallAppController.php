@@ -62,7 +62,9 @@ class InstallAppController extends Controller
             'password' => ['required', 'string'],
             'sms_time' => ['required'],
             'sms_time_format' => ['required'],
-            'category_id' => ['required']
+            'category_id' => ['required'],
+            'sms_keyword' => ['required'],
+            'ussd_code' => ['required']
        ]);
        $data['user_id']=Auth::user()->id;
        InstallApp::create($data);

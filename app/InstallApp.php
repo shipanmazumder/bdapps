@@ -22,13 +22,16 @@ class InstallApp extends Model
 
     public function get_app_details()
     {
-        $apps=DB::table("install_apps")->where("user_id",Auth::user()->id)->get();
+        $apps=InstallApp::with("category")->where("user_id",Auth::user()->id)->get();
+        // $apps=DB::table("install_apps")->where("user_id",Auth::user()->id)->get();
         $data=array();
         if($apps)
         {
             foreach ($apps as $key=>$value) {
                 $data[$key]['id']=$value->id;
                 $data[$key]['app_name']=$value->app_name;
+                $data[$key]['ussd_code']=$value->ussd_code;
+                $data[$key]['category_name']=$value->category->name;
                 $data[$key]['total_subscriber']=0;
                 $where_match=['app_id'=>$value->id,"is_sent"=>0];
                 $app_remain_sms=Content::where($where_match)->get()->count();
@@ -41,5 +44,9 @@ class InstallApp extends Model
             }
         }
         return $data;
+    }
+    public function category()
+    {
+        return $this->belongsTo(\App\Category::class);
     }
 }

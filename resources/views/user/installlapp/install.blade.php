@@ -58,6 +58,28 @@ Install App
                                                     @enderror
                                                 </div>
                                             </div>
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="sms_keyword">SMS Keyword</label><small class="req">*</small>
+                                                    <input  name="sms_keyword" type="text" class="form-control"  requiredid="sms_keyword" placeholder="SMS Keyword">
+                                                    @error('sms_keyword')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="ussd_code">USSD Code</label><small class="req">*</small>
+                                                    <input  name="ussd_code" type="text" class="form-control"  required id="ussd_code" placeholder="*213*XXXX#">
+                                                    @error('ussd_code')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                    @enderror
+                                                </div>
+                                            </div>
                                             <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <label for="sms_time">Sms Time</label><small class="req">*</small>

@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8c56b1d-8e75-40be-8522-ea883dea43c6" name="Default Changelist" comment="content send success">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_16_163216_add_versity_name_to_users_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_04_07_141406_add_approved_by_to_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layout/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layout/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/user-edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/user-edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/users.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/users.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/users_data.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/users_data.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/register/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/register/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/InstallApp.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/InstallApp.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/dashboard/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/dashboard/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/faq/faqgenerate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/faq/faqgenerate.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/installlapp/install.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/installlapp/install.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +17,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -152,7 +141,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -207,7 +195,8 @@
       <workItem from="1584114649059" duration="215000" />
       <workItem from="1584367310766" duration="3532000" />
       <workItem from="1584624752172" duration="329000" />
-      <workItem from="1586268674819" duration="4959000" />
+      <workItem from="1586268674819" duration="5067000" />
+      <workItem from="1588258190553" duration="1015000" />
     </task>
     <task id="LOCAL-00001" summary="instruction server ip fixed">
       <created>1581246374203</created>
@@ -234,20 +223,19 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

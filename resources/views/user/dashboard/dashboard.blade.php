@@ -53,12 +53,13 @@
                 @isset($total_apps)
                     @foreach($total_apps as $key=>$value)
                         <a href="{{url("user/app-content/".$value['id'])}}">
-                            <div class="col-md-4 col-sm-6 col-lg-3">
+                            <div class="col-md-4 col-sm-6 col-lg-4">
                                 <div class="mini-stat clearfix bx-shadow">
                                     <span class="mini-stat-icon bg-{{$value['class_name']}}"><i class="md  md-question-answer"></i></span>
                                     <div class="mini-stat-info text-right text-muted">
                                         <span class="counter"> {{$value['app_remain_sms']}}</span>
-                                        {{$value['app_name']}}
+                                        <p class="m-t-5">{{$value['app_name']}}<small><code>({{$value['ussd_code']?$value['ussd_code']:"USSD CODE"}})</code></small></p>
+                                        <p class="m-t-5">Category: {{$value['category_name']}}</p>
                                     </div>
                                 </div>
                             </div>
