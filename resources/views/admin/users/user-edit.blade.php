@@ -55,16 +55,21 @@ User Information
                                                 @enderror
                                             </div>
                                         </div>
-                                        <div class="col-sm-12">
+                                        <div class="col-md-12">
                                             <div class="form-group">
-                                                <label for="versity_name">University</label><small class="req">*</small><br/>
-                                                <input type="text" value="{{$single->versity_name}}" name="versity_name" required placeholder="University Name" class="form-control">
-                                                @error('versity_name')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
+                                                <label for="university_id">{{ __('University Name:') }}</label>
+                                                <select name="university_id" id="university_id" required class="form-control">
+                                                    <option value="">--Select--</option> 
+                                                    @foreach ($university as $item)
+                                                        <option {{$single->university_id==$item->id?"selected":""}} value="{{$item->id}}">{{$item->name}}</option> 
+                                                    @endforeach
+                                                </select>
+                                                @error('university_id')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
                                                 @enderror
-                                            </div>
+                                            </div>    
                                         </div>
                                         <div class="col-sm-12">
                                             <div class="form-group">

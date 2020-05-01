@@ -10,14 +10,14 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-//    protected $guarded=[];
+    //    protected $guarded=[];
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'phone','email', 'password','status',"versity_name"
+        'name', 'phone', 'email', 'password', 'status', "university_id"
     ];
 
     /**
@@ -49,19 +49,23 @@ class User extends Authenticatable
 
     public function scopeActive($query)
     {
-        return $query->where("status",1);
+        return $query->where("status", 1);
     }
     public function scopePending($query)
     {
-        return $query->where("status",2);
+        return $query->where("status", 2);
     }
     public function scopeNew($query)
     {
-        return $query->where("status",0);
+        return $query->where("status", 0);
     }
 
     public function approver()
     {
-        return $this->belongsTo(\App\User::class,"approved_by");
+        return $this->belongsTo(\App\User::class, "approved_by");
+    }
+    public function university()
+    {
+        return $this->belongsTo(\App\University::class);
     }
 }

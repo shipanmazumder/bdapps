@@ -5,7 +5,7 @@
             <td >{{$value->name}}</td>
             <td >{{$value->phone}}</td>
             <td >{{$value->email}}</td>
-            <td >{{$value->versity_name}}</td>
+            <td >{{$value->university->name}}</td>
             <td >{{isset($value->approver->name)?$value->approver->name:""}}</td>
             <td >{{($value->status==1)?"Approved":(($value->status==2)?"Pending":"New")}}</td>
             <td class="text-center" >

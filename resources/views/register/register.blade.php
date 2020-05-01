@@ -95,12 +95,18 @@
                             </div>
                         </div>
                         <div class="form-group">
-
                             <div class="col-md-12">
-                                <label for="versity_name">{{ __('University Name:') }}</label>
-                                <input id="versity_name" type="versity_name" class="form-control @error('versity_name') is-invalid @enderror" name="versity_name" value="{{ old('versity_name') }}"  autocomplete="versity_name">
-
-                                @error('versity_name')
+                                <label for="university_id">{{ __('University Name:') }}</label>
+                                @php
+                                    $university=\App\University::orderBy("name","asc")->get();
+                                @endphp
+                                <select name="university_id" id="university_id" required class="form-control">
+                                       <option value="">--Select--</option> 
+                                       @foreach ($university as $item)
+                                        <option value="{{$item->id}}">{{$item->name}}</option> 
+                                       @endforeach
+                                </select>
+                                @error('university_id')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

@@ -8,6 +8,8 @@ use App\Http\Controllers\Controller;
 use App\InstallApp;
 use App\SubscriptionData;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
 
 class UssdSubscriptionController extends Controller
 {
@@ -18,6 +20,7 @@ class UssdSubscriptionController extends Controller
     public function index()
     {
         $this->receiver->getAddress();
+//        Log::info('Log message', array('context' => 'Other helpful information'));
         if($this->receiver->getUssdOperation()=="mo-init")
         {
             $appId = $this->receiver->getApplicationId();
@@ -47,6 +50,7 @@ class UssdSubscriptionController extends Controller
                     $subscribe->subscribe_id=$this->receiver->getAddress();
                     $subscribe->save();
                 }
+
                 return  $response;
             }
         }

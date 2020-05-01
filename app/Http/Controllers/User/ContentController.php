@@ -56,7 +56,7 @@ class ContentController extends Controller
         $this->data['content']=Content::with("installApp")->where($where_condition)->paginate(10);
         if(count($this->data['content'])<=0)
         {
-            setMessage("message",'danger','No Content Content Found');
+            setMessage("message",'danger','No Content Found');
             return redirect()->route("user.dashboard");
         }
         $page=$request->input('page');

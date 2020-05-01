@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8c56b1d-8e75-40be-8522-ea883dea43c6" name="Default Changelist" comment="content send success">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/InstallApp.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/InstallApp.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/dashboard/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/dashboard/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/faq/faqgenerate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/faq/faqgenerate.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/installlapp/install.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/installlapp/install.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/UssdSubscriptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/UssdSubscriptionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/ContentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/ContentController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +192,8 @@
       <workItem from="1584367310766" duration="3532000" />
       <workItem from="1584624752172" duration="329000" />
       <workItem from="1586268674819" duration="5067000" />
-      <workItem from="1588258190553" duration="1015000" />
+      <workItem from="1588258190553" duration="1169000" />
+      <workItem from="1588261088838" duration="1980000" />
     </task>
     <task id="LOCAL-00001" summary="instruction server ip fixed">
       <created>1581246374203</created>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddApprovedByToUsersTable extends Migration
+class AddUniverdityIdToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,7 @@ class AddApprovedByToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
-            $table->unsignedInteger("approved_by")->after("status")->default(0)->change()->index();
+            $table->unsignedInteger("university_id")->after("role_id")->default(0)->index();
         });
     }
 
