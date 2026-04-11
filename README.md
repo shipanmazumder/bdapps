@@ -21,7 +21,7 @@ This project is a Laravel-based portal for managing BDApps integrations:
 ## Setup
 1. Install dependencies:
 ```bash
-php composer2.phar install --no-interaction
+php composer.phar install --no-interaction
 ```
 
 2. Prepare environment:
@@ -67,5 +67,5 @@ All endpoints are `POST`:
 - Models use `App\Models\...` namespace.
 - If autoload issues appear after pulling changes:
 ```bash
-php composer2.phar dump-autoload
+php composer.phar dump-autoload
 ```
