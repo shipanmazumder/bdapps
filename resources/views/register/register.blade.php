@@ -98,7 +98,7 @@
                             <div class="col-md-12">
                                 <label for="university_id">{{ __('University Name:') }}</label>
                                 @php
-                                    $university=\App\University::orderBy("name","asc")->get();
+                                    $university=\App\Models\University::orderBy("name","asc")->get();
                                 @endphp
                                 <select name="university_id" id="university_id" required class="form-control">
                                        <option value="">--Select--</option> 

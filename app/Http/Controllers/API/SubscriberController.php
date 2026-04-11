@@ -4,7 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Components\BDAppsApi;
 use App\Http\Controllers\Controller;
-use App\InstallApp;
+use App\Models\InstallApp;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 

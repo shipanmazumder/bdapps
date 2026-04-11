@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Category;
+use App\Models\Category;
 use App\Http\Controllers\Controller;
-use App\InstallApp;
+use App\Models\InstallApp;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Session;
@@ -75,7 +75,7 @@ class InstallAppController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\InstallApp  $installApp
+     * @param  \App\Models\InstallApp  $installApp
      * @return \Illuminate\Http\Response
      */
     public function show(InstallApp $installApp)
@@ -86,7 +86,7 @@ class InstallAppController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\InstallApp  $installApp
+     * @param  \App\Models\InstallApp  $installApp
      * @return \Illuminate\Http\Response
      */
     public function edit(InstallApp $installApp)
@@ -98,7 +98,7 @@ class InstallAppController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\InstallApp  $installApp
+     * @param  \App\Models\InstallApp  $installApp
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, InstallApp $installApp)
@@ -109,7 +109,7 @@ class InstallAppController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\InstallApp  $installApp
+     * @param  \App\Models\InstallApp  $installApp
      * @return \Illuminate\Http\Response
      */
     public function destroy(InstallApp $installApp)

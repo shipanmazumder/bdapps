@@ -57,9 +57,9 @@ return [
     'asset_url' => env('ASSET_URL', null),
     'total_install_limit' => env('APP_LIMIT', 6),
     'app_phone' => env('APP_PHONE', "01834741581"),
-    'bdapps_sms_url' => env('SMS_URL', env('APP_URL', 'http://localhost') . '/bdapps/sms'),
-    'bdapps_ussd_url' => env('USSD_URL', env('APP_URL', 'http://localhost') . '/bdapps/ussd'),
-    'bdapps_subscription_notify_url' => env('SUBSCRIPTION_NOTIFY_URL', env('APP_URL', 'http://localhost') . '/bdapps/subscription-notify'),
+    'bdapps_sms_url' => env('SMS_URL', env('APP_URL', 'http://localhost') . '/api/bdapps/sms'),
+    'bdapps_ussd_url' => env('USSD_URL', env('APP_URL', 'http://localhost') . '/api/bdapps/ussd'),
+    'bdapps_subscription_notify_url' => env('SUBSCRIPTION_NOTIFY_URL', env('APP_URL', 'http://localhost') . '/api/bdapps/subscription-notify'),
 
     /*
     |--------------------------------------------------------------------------
@@ -231,7 +231,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'PDF' => Barryvdh\DomPDF\Facade::class,
+        'PDF' => Barryvdh\DomPDF\Facade\Pdf::class,
 
     ],
 

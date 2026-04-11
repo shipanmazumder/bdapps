@@ -2,56 +2,27 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Models\User;
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
-
-    use AuthenticatesUsers;
-
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-    protected $redirectTo;
-
     protected function redirectTo()
     {
         if ((int) Auth::user()->role_id === 1) {
             return route('admin.dashboard');
-
-        }
-        elseif ((int) Auth::user()->role_id === 2) {
+        } elseif ((int) Auth::user()->role_id === 2) {
             return route('user.dashboard');
-        }else{
+        } else {
             return route('user.dashboard');
         }
     }
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+
     public function __construct()
     {
-
         $this->middleware('guest')->except('logout');
     }
 
@@ -64,9 +35,39 @@ class LoginController extends Controller
     {
         return 'phone';
     }
-    protected function credentials(Request $request)
+
+    protected function credentials(Request $request): array
     {
-        return ['phone'=>$request->{$this->username()},'password'=>$request->password,'status'=>1];
+        return [
+            'phone' => $request->{$this->username()},
+            'password' => $request->password,
+            'status' => 1,
+        ];
+    }
+
+    public function login(Request $request)
+    {
+        $request->validate([
+            $this->username() => ['required', 'string'],
+            'password' => ['required', 'string'],
+        ]);
+
+        if (Auth::attempt($this->credentials($request), $request->boolean('remember'))) {
+            $request->session()->regenerate();
+
+            return redirect()->intended($this->redirectTo());
+        }
+
+        return $this->sendFailedLoginResponse($request);
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('login');
     }
 
     protected function sendFailedLoginResponse(Request $request)

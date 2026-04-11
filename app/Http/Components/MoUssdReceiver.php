@@ -3,6 +3,7 @@
 
 namespace App\Http\Components;
 
+use InvalidArgumentException;
 
 class MoUssdReceiver
 {
@@ -22,26 +23,24 @@ class MoUssdReceiver
         check the validity of the response
     **/
 
-    public function __construct(){
-        $array = json_decode(file_get_contents('php://input'), true);
-        $this->sourceAddress = $array['sourceAddress'];
-        $this->message = $array['message'];
-        $this->requestId = $array['requestId'];
-        $this->applicationId = $array['applicationId'];
-        $this->encoding = $array['encoding'];
-        $this->version = $array['version'];
-        $this->sessionId = $array['sessionId'];
-        $this->ussdOperation = $array['ussdOperation'];
-        // $this->vlrAddress = $array['vlrAddress'];
+    public function __construct(array $array = null){
+        if ($array === null) {
+            $decoded = json_decode(file_get_contents('php://input'), true);
+            $array = is_array($decoded) ? $decoded : [];
+        }
 
-        if (!((isset($this->sourceAddress) && isset($this->message)))) {
-            $api=new BDAppsApi;
-            return $api->errorOutput();
-        } else {
-            // Success received response
-            $responses = array("statusCode" => "S1000", "statusDetail" => "Success");
-            header("Content-type: application/json");
-            echo json_encode($responses);
+        $this->sourceAddress = $array['sourceAddress'] ?? null;
+        $this->message = $array['message'] ?? null;
+        $this->requestId = $array['requestId'] ?? null;
+        $this->applicationId = $array['applicationId'] ?? null;
+        $this->encoding = $array['encoding'] ?? null;
+        $this->version = $array['version'] ?? null;
+        $this->sessionId = $array['sessionId'] ?? null;
+        $this->ussdOperation = $array['ussdOperation'] ?? null;
+        // $this->vlrAddress = $array['vlrAddress'] ?? null;
+
+        if (!$this->sourceAddress || !$this->applicationId || !$this->sessionId || !$this->ussdOperation) {
+            throw new InvalidArgumentException('Some of the required parameters are not provided');
         }
     }
 

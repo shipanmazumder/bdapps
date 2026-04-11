@@ -4,7 +4,7 @@ namespace App\Http\Components;
 
 use App\Group;
 use App\Office;
-use App\User;
+use App\Models\User;
 use Auth;
 use Mail;
 use App\Mail\NotificationEmail;

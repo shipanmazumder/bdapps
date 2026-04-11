@@ -3,9 +3,9 @@
 namespace App\Console\Commands;
 
 use App\Http\Components\SmsSender;
-use App\InstallApp;
-use App\Content;
-use App\User;
+use App\Models\InstallApp;
+use App\Models\Content;
+use App\Models\User;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
 

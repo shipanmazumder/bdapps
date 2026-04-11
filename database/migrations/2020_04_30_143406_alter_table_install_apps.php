@@ -26,9 +26,8 @@ class AlterTableInstallApps extends Migration
      */
     public function down()
     {
-          Schema::table('install_apps', function (Blueprint $table) {
-            $table->string('ussd_code')->nullable()->default(null);
-            $table->string('sms_keyword')->nullable()->default(null);
+        Schema::table('install_apps', function (Blueprint $table) {
+            $table->dropColumn(['ussd_code', 'sms_keyword']);
         });
     }
 }

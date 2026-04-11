@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use App\InstallApp;
-use App\SubscriptionData;
+use App\Models\InstallApp;
+use App\Models\SubscriptionData;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
